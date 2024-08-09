@@ -8,6 +8,7 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class HeaderComponent {
   public totalItem: number = 0
+  public searchTerm: string = ''
 
   constructor(private cartService: CartService) {}
 
@@ -16,4 +17,10 @@ export class HeaderComponent {
       this.totalItem = res.length
     })
   }
+
+  search(event: any) {
+    this.searchTerm = (event.target as HTMLInputElement).value
+    this.cartService.search.next(this.searchTerm)
+  }
+
 }

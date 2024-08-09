@@ -4,7 +4,7 @@
       <i style="font-size: 40px; color: white;" class="fas fa-shipping-fast"> &nbsp; </i>
       <strong style="font-size: 30px; color: white;">Flipkart</strong>
       <div class="form-group">
-        <input type="text" placeholder="Search products" class="form-control">
+        <input type="text" placeholder="Search products" [(ngModel)]="searchTerm" (keyup)="search($event)" class="form-control">
       </div>
       <span  class="fas fa-search search-icon"></span>
     </div>

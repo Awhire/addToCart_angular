@@ -13,6 +13,7 @@
 .item {
   margin: 0 15px;
   text-align: center;
+  cursor: pointer;
 }
 .item img {
   width: 64px;
